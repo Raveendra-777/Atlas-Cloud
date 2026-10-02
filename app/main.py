@@ -8,12 +8,12 @@ from pydantic import BaseModel
 app = FastAPI(title="Atlas Cloud")
 
 
-NVIDIA_API_KEY = "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"
+NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 NVIDIA_BASE_URL = os.getenv(
     "NVIDIA_BASE_URL",
     "https://integrate.api.nvidia.com/v1"
 )
-NVIDIA_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b"
+NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
 
 
 class ChatRequest(BaseModel):
